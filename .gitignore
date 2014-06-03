@@ -33,6 +33,8 @@ var/
 sdist/
 develop-eggs/
 .installed.cfg
+modules/
+
 
 ## VAGRANT
 /.vagrant

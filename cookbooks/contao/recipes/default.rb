@@ -18,6 +18,15 @@ EOF
     end
 end
 
+
+directory "/usr/share/nginx/www" do
+  user "www-data"
+  group "www-data"
+  mode "0755"
+  recursive true
+end
+
+
 #file "/usr/share/nginx/www/wordpress/wp-config-sample.php" do
 #    action "delete"
 #end
