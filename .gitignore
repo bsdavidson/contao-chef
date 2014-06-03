@@ -35,5 +35,4 @@ develop-eggs/
 .installed.cfg
 
 ## VAGRANT
-.vagrant/
-.vagrant
+/.vagrant
