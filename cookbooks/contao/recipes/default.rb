@@ -19,12 +19,18 @@ EOF
 end
 
 
-directory "/usr/share/nginx/www" do
-  user "www-data"
-  group "www-data"
-  mode "0755"
-  recursive true
+bash "set_permissions" do
+    code <<-EOF
+chown -R www-data.www-data /usr/share/nginx/www
+EOF
 end
+
+#directory "/usr/share/nginx/www" do   This doesn't work. 
+#  user "www-data"
+#  group "www-data"
+#  mode "0755"
+#  recursive true
+#end
 
 
 #file "/usr/share/nginx/www/wordpress/wp-config-sample.php" do
